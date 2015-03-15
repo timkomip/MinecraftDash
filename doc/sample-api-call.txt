@@ -1,0 +1,18 @@
+Array
+(
+    [HostName] => A Minecraft Server
+    [GameType] => SMP
+    [GameName] => MINECRAFT
+    [Version] => 1.8.3
+    [Plugins] => 
+    [Map] => world
+    [Players] => 1
+    [MaxPlayers] => 20
+    [HostPort] => 55555
+    [HostIp] => 127.0.1.1
+    [Software] => Vanilla
+)
+Array
+(
+    [0] => stmcgriddles
+)
