@@ -3,22 +3,23 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Collection;
-use jyc\rcon\Rcon;
+use App\Gateways\RCONGateway;
 
 class MinecraftServer
 {
-    public function currentPlayers() {
-        $r = new Rcon($_ENV['MC_RCON_IP'], intval($_ENV['MC_RCON_PORT']), $_ENV['MC_RCON_PASSWORD'], 5, 5, 5000);
+    protected $gateway;
 
-        $r->connect();
-        $response = $r->command("list");
-        $r->disconnect();
+    public function __construct(RCONGateway $gateway) {
+        $this->gateway = $gateway;
+    }
+
+    public function currentPlayers() {
+        $response = $this->gateway->command('list');
         $namelist = explode(':',trim($response))[1];
-        if(!strlen($namelist)) {
-            $names = [];
-        } else {
-            $names = explode(',', $namelist);
-        }
-        return new Collection($names);
+        return new Collection($this->splitNames($namelist));
+    }
+
+    private function splitNames($namelist) {
+        return strlen($namelist) ? explode(',', $namelist) : [];
     }
 }
