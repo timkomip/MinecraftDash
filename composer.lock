@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e9a4147960512a3c1f26e8da1ae3d6b8",
+    "hash": "bf09567b512e2d430d14d01f68a3110c",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -407,6 +407,46 @@
                 "tokenizer"
             ],
             "time": "2015-03-11 20:06:43"
+        },
+        {
+            "name": "jyc/rcon",
+            "version": "1.1.0",
+            "source": {
+                "type": "hg",
+                "url": "https://bitbucket.org/jyc/rcon",
+                "reference": "bb9fa2a6e995e344ea412cc5a9b228021c6aff80"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/jyc/rcon/get/bb9fa2a6e995e344ea412cc5a9b228021c6aff80.zip",
+                "reference": "bb9fa2a6e995e344ea412cc5a9b228021c6aff80",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "jyc\\rcon": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Chan",
+                    "email": "jchan@icebrg.us"
+                }
+            ],
+            "description": "RCON client implementation in PHP.",
+            "homepage": "https://bitbucket.org/jyc/rcon",
+            "keywords": [
+                "rcon"
+            ],
+            "time": "2012-05-09 02:07:57"
         },
         {
             "name": "laravel/framework",

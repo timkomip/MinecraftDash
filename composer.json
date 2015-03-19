@@ -6,7 +6,8 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "5.0.*",
-		"xpaw/php-minecraft-query": "dev-master"
+		"xpaw/php-minecraft-query": "dev-master",
+		"jyc/rcon": "~1.1"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
